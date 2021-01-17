@@ -75,7 +75,7 @@ public class GameView extends GridLayout {
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
 
-        int cardWidth=(Math.min(w,h)-20)/Config.LINES;  //手机屏幕的width和height二者之间取最小的
+        int cardWidth=(Math.min(w,h)-20)/5;  //手机屏幕的width和height二者之间取最小的
 
         addCards(cardWidth,cardWidth);    //正方形卡片
 
@@ -150,11 +150,6 @@ public class GameView extends GridLayout {
                             //①：如果一开始的数是空的，那么要把遍历出来的x1的值给到一开始的这个最左边的空格子，
                             // 而且遍历出来的这个数要置为0（相当于交换数字）
 
-//                            MainActivity.getMainActivity()
-//                                        .getAnimLayer()
-
-//                            MainActivity.getMainActivity().getAnimLayer()
-//                                    .createMoveAnim(cardsMap[x1][y],cardsMap[x][y], x1, x, y, y);
 
 
                             cardsMap[x][y].setNum(cardsMap[x1][y].getNum());

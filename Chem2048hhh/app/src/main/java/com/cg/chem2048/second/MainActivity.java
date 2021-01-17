@@ -29,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
         present_score_num=(TextView) findViewById(R.id.present_score_num);          //强制类型转换
         highest_score_num=(TextView) findViewById(R.id.highest_score_num);
-//        animLayer = (AnimLayer) findViewById(R.id.animLayer);
-
     }
 
     @Override
@@ -105,9 +103,7 @@ public class MainActivity extends AppCompatActivity {
         highest_score_num.setText(s+"");
     }
 
-    public AnimLayer getAnimLayer() {
-        return animLayer;
-    }
+
 
 
 
@@ -115,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
     private int score=0;                    //初始分数设为0
     private TextView present_score_num;
     private TextView highest_score_num;
-    private AnimLayer animLayer = null;
 
     private static MainActivity mainActivity=null;
 

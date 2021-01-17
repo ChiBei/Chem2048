@@ -31,11 +31,6 @@
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/guideline6">
 
-        <com.cg.chem2048.second.AnimLayer
-            android:id="@+id/animLayer"
-            android:layout_width="match_parent"
-            android:layout_height="350dp"></com.cg.chem2048.second.AnimLayer>
-
         <com.cg.chem2048.second.GameView
             android:id="@+id/gameview"
             android:layout_width="350dp"
@@ -145,6 +140,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
