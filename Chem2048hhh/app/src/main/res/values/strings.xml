@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Chem2048hhh</string>
+    <string name="action_settings">Settings</string>
+    <string name="present_score">得分</string>
+    <string name="present_score_num"> </string>
+    <string name="highest_score">历史最高分</string>
+    <string name="highest_score_num"> </string>
+    <string name="animLayer">animLayer</string>
+
+    <!-- Strings used for fragments for navigation -->
+
+</resources>
