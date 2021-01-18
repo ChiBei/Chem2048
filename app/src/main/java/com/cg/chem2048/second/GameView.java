@@ -75,7 +75,7 @@ public class GameView extends GridLayout {
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
 
-        int cardWidth=(Math.min(w,h)-20)/5;  //手机屏幕的width和height二者之间取最小的
+        int cardWidth=(Math.min(w,h)-20)/5;  //手机屏幕的width和height二者之间取最小的                                有必要吗？？？？？？
 
         addCards(cardWidth,cardWidth);    //正方形卡片
 
@@ -84,7 +84,6 @@ public class GameView extends GridLayout {
     }
 
     private void addCards(int cardWidth,int cardHeight){
-
 
         Card c;
 
@@ -112,8 +111,6 @@ public class GameView extends GridLayout {
         addRandomNum();
 
     }
-
-
 
 
     private void addRandomNum(){
@@ -181,10 +178,7 @@ public class GameView extends GridLayout {
         if(merge){
             addRandomNum();
             checkComplete();            //检查是否游戏结束
-
         }
-
-
     }
 
 
@@ -323,9 +317,9 @@ public class GameView extends GridLayout {
         }
         if (complete){
             new AlertDialog.Builder(getContext())
-                    .setTitle("hello")
-                    .setMessage("end")
-                    .setPositiveButton("begin again", new DialogInterface.OnClickListener() {
+                    .setTitle("啊偶，游戏结束了")
+//                    .setMessage("")
+                    .setPositiveButton("再来一局", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             startGame();
@@ -336,7 +330,9 @@ public class GameView extends GridLayout {
 
 
     private Card[][] cardsMap=new Card[5][5];
-    private List<Point> emptyPoint=new ArrayList<Point>();
+
+
+    private ArrayList<Point> emptyPoint=new ArrayList<Point>();
 
 
 

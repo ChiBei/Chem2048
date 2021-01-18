@@ -13,14 +13,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-
     public MainActivity(){
         mainActivity=this;
     }
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-
 
     @Override
     public void onBackPressed() {                                   //重写不小心退出游戏的方法
@@ -103,21 +96,19 @@ public class MainActivity extends AppCompatActivity {
         highest_score_num.setText(s+"");
     }
 
-
-
-
-
-
     private int score=0;                    //初始分数设为0
     private TextView present_score_num;
     private TextView highest_score_num;
-
     private static MainActivity mainActivity=null;
+    public static final String SP_KEY_BEST_SCORE = "bestScore";         //全局变量
 
-    public static MainActivity getMainActivity() {          //???
+    public static MainActivity getMainActivity() {
         return mainActivity;
     }
 
-    public static final String SP_KEY_BEST_SCORE = "bestScore";
-
 }
+
+
+
+
+

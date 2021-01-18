@@ -1,10 +1,7 @@
 <resources>
     <string name="app_name">Chem2048</string>
     <string name="present_score">得分</string>
-    <string name="present_score_num"> </string>
+    <string name="present_score_num">0</string>
     <string name="highest_score">历史最高分</string>
-    <string name="highest_score_num"> </string>
-
-    <!-- Strings used for fragments for navigation -->
-
+    <string name="highest_score_num">0</string>
 </resources>

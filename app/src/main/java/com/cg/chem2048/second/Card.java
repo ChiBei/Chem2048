@@ -3,14 +3,12 @@ package com.cg.chem2048.second;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.StringDef;
 import androidx.core.content.ContextCompat;
 
 import java.util.Objects;
@@ -19,18 +17,11 @@ public class Card extends FrameLayout {         //  card继承自framelayout，�
     public Card(@NonNull Context context) {
         super(context);
 
-        LayoutParams lp=null;                   //???
-
-//        background = new View(getContext());            //这三句在干嘛？？？
-//        background.setBackgroundColor(0x33ffffff);
-//        addView(background, lp);
-
         label=new TextView(getContext());
         label.setTextSize(25);
         label.setGravity(Gravity.CENTER);
 
-        label.setBackgroundColor(0x50ffffff);
-        lp=new LayoutParams(-1,-1);  //填充满整个父级
+        LayoutParams lp=new LayoutParams(-1,-1);  //填充满整个父级
         lp.setMargins(20,20,0,0);
         addView(label,lp);
 
@@ -40,7 +31,6 @@ public class Card extends FrameLayout {         //  card继承自framelayout，�
     private int num=0;
 
     public int getNum(){
-
         return num;
     }
 
@@ -71,7 +61,7 @@ public class Card extends FrameLayout {         //  card继承自framelayout，�
         if (num<=0){
             label.setText(" ");
         }else{
-            label.setText(ChemNameEng[(int)(Math.log(num) /Math.log(2))-1]);     //和字符串相连，使int转换为字符串,接收参数需要字符串,如果无空格，则是给变量的地址赋值了。。但是好像不用加也没事？
+            label.setText(ChemNameEng[(int)(Math.log(num) /Math.log(2))-1]);                                    //和字符串相连，使int转换为字符串,接收参数需要字符串,如果无空格，则是给变量的地址赋值了。。但是好像不用加也没事？
             label.setTextColor(Color.WHITE);
         }
 
